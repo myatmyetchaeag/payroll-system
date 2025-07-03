@@ -1,0 +1,17 @@
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\TaxRuleTest.exe
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\TaxRuleTest.deps.json
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\TaxRuleTest.runtimeconfig.json
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\TaxRuleTest.dll
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\TaxRuleTest.pdb
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.csproj.AssemblyReference.cache
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.AssemblyInfoInputs.cache
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.AssemblyInfo.cs
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.csproj.CoreCompileInputs.cache
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleT.1D652E06.Up2Date
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.dll
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\refint\TaxRuleTest.dll
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.pdb
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\TaxRuleTest.genruntimeconfig.cache
+D:\Work\BlockChainLabs\Payroll System\TaxRuleTest\obj\Debug\net9.0\ref\TaxRuleTest.dll

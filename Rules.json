@@ -1,0 +1,570 @@
+[
+  {
+    "RuleID": 1,
+    "RuleName": "TH-Bracket-5%",
+    "RuleType": "Tax",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 150000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 300000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.05 }
+    ]
+  },
+  
+  {
+    "RuleID": 2,
+    "RuleName": "TH-Bracket-10%",
+    "RuleType": "Tax",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 300000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 500000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.10 }
+    ]
+  },
+  {
+    "RuleID": 3,
+    "RuleName": "TH-Bracket-15%",
+    "RuleType": "Tax",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 500000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 750000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.15 }
+    ]
+  },
+  {
+    "RuleID": 4,
+    "RuleName": "TH-Bracket-20%",
+    "RuleType": "Tax",
+    "Priority": 4,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 750000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 1000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.20 }
+    ]
+  },
+  {
+    "RuleID": 5,
+    "RuleName": "TH-Bracket-25%",
+    "RuleType": "Tax",
+    "Priority": 5,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 1000000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 2000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.25 }
+    ]
+  },
+  {
+    "RuleID": 6,
+    "RuleName": "TH-Bracket-30%",
+    "RuleType": "Tax",
+    "Priority": 6,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 2000000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 4000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.30 }
+    ]
+  },
+  {
+    "RuleID": 7,
+    "RuleName": "TH-Bracket-35%",
+    "RuleType": "Tax",
+    "Priority": 7,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 4000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.35 }
+    ]
+  },
+
+  {
+    "RuleID": 8,
+    "RuleName": "TH-Flat0.5%",
+    "RuleType": "Flat",
+    "Priority": 100,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFlatTaxRate", "ActionValue": 0.005 }
+    ]
+  },
+
+  {
+    "RuleID": 9,
+    "RuleName": "Allowance - Personal",
+    "RuleType": "Allowance",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedAllowance", "ActionValue": 60000 }
+    ]
+  },
+  {
+    "RuleID": 10,
+    "RuleName": "Allowance - Spouse",
+    "RuleType": "Allowance",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "HasSpouse", "Operator": "==", "Value": true }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedAllowance", "ActionValue": 60000 }
+    ]
+  },
+  {
+    "RuleID": 11,
+    "RuleName": "Allowance - Child",
+    "RuleType": "Allowance",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" },
+      { "Parameter": "NumChildren", "Operator": ">", "Value": 0 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyPerUnitAllowance", "ActionValue": 30000 }
+    ]
+  },
+
+  {
+    "RuleID": 12,
+    "RuleName": "Standard Deduction",
+    "RuleType": "Deduction",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyStandardDeduction", "ActionValue": 0.50 }
+    ]
+  },
+  {
+    "RuleID": 13,
+    "RuleName": "Social Security (TH)",
+    "RuleType": "Deduction",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedDeduction", "ActionValue": 9000 }
+    ]
+  },
+
+
+
+  {
+    "RuleID": 14,
+    "RuleName": "SG-TaxTier1",
+    "RuleType": "Tax",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 20000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.00 }
+    ]
+  },
+  {
+    "RuleID": 15,
+    "RuleName": "SG-TaxTier2",
+    "RuleType": "Tax",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 20000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 30000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.02 }
+    ]
+  },
+  {
+    "RuleID": 16,
+    "RuleName": "SG-TaxTier3",
+    "RuleType": "Tax",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 30000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 40000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.035 }
+    ]
+  },
+  {
+    "RuleID": 17,
+    "RuleName": "SG-TaxTier4",
+    "RuleType": "Tax",
+    "Priority": 4,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 40000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 80000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.07 }
+    ]
+  },
+  {
+    "RuleID": 18,
+    "RuleName": "SG-TaxTier5",
+    "RuleType": "Tax",
+    "Priority": 5,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 80000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 120000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.115 }
+    ]
+  },
+  {
+    "RuleID": 30,
+    "RuleName": "CPF Contribution (SG)",
+    "RuleType": "Deduction",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "SG" },
+      { "Parameter": "IsCPFEligible", "Operator": "==", "Value": true }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedDeduction", "ActionValue": 10800 }
+    ]
+  },
+
+
+
+
+  {
+    "RuleID": 100,
+    "RuleName": "MY-TaxBracket-0%",
+    "RuleType": "Tax",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 5000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.00 }
+    ]
+  },
+  {
+    "RuleID": 101,
+    "RuleName": "MY-TaxBracket-1%",
+    "RuleType": "Tax",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 5000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 20000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.01 }
+    ]
+  },
+  {
+    "RuleID": 102,
+    "RuleName": "MY-TaxBracket-3%",
+    "RuleType": "Tax",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 20000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 35000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.03 }
+    ]
+  },
+  {
+    "RuleID": 103,
+    "RuleName": "MY-TaxBracket-6%",
+    "RuleType": "Tax",
+    "Priority": 4,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 35000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 50000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.06 }
+    ]
+  },
+  {
+    "RuleID": 104,
+    "RuleName": "MY-TaxBracket-11%",
+    "RuleType": "Tax",
+    "Priority": 5,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 50000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 70000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.11 }
+    ]
+  },
+  {
+    "RuleID": 105,
+    "RuleName": "MY-TaxBracket-19%",
+    "RuleType": "Tax",
+    "Priority": 6,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 70000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 100000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.19 }
+    ]
+  },
+  {
+    "RuleID": 106,
+    "RuleName": "MY-TaxBracket-25%",
+    "RuleType": "Tax",
+    "Priority": 7,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 100000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 400000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.25 }
+    ]
+  },
+  {
+    "RuleID": 107,
+    "RuleName": "MY-TaxBracket-26%",
+    "RuleType": "Tax",
+    "Priority": 8,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 400000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 600000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.26 }
+    ]
+  },
+  {
+    "RuleID": 108,
+    "RuleName": "MY-TaxBracket-28%",
+    "RuleType": "Tax",
+    "Priority": 9,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 600000 },
+      { "Parameter": "TaxableIncome", "Operator": "<=", "Value": 2000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.28 }
+    ]
+  },
+  {
+    "RuleID": 109,
+    "RuleName": "MY-TaxBracket-30%",
+    "RuleType": "Tax",
+    "Priority": 10,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "TaxableIncome", "Operator": ">", "Value": 2000000 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyTaxRate", "ActionValue": 0.30 }
+    ]
+  },
+  {
+    "RuleID": 110,
+    "RuleName": "MY-Allowance-Personal",
+    "RuleType": "Allowance",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedAllowance", "ActionValue": 9000 }
+    ]
+  },
+  {
+    "RuleID": 111,
+    "RuleName": "MY-Allowance-Spouse",
+    "RuleType": "Allowance",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "HasSpouse", "Operator": "==", "Value": true }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyFixedAllowance", "ActionValue": 4000 }
+    ]
+  },
+  {
+    "RuleID": 112,
+    "RuleName": "MY-Allowance-Child",
+    "RuleType": "Allowance",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "Country", "Operator": "==", "Value": "MY" },
+      { "Parameter": "NumChildren", "Operator": ">", "Value": 0 }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyPerUnitAllowance", "ActionValue": 2000 }
+    ]
+  },
+  // {
+  //   "RuleID": 113,
+  //   "RuleName": "MY-Deduction-EPF+LifeInsurance",
+  //   "RuleType": "Deduction",
+  //   "Priority": 1,
+  //   "IsActive": true,
+  //   "Conditions": [
+  //     { "Parameter": "Country", "Operator": "==", "Value": "MY" }
+  //   ],
+  //   "Actions": [
+  //     { "ActionType": "ApplyFixedDeduction", "ActionValue": 7000 }
+  //   ]
+  // },
+  // {
+  //   "RuleID": 114,
+  //   "RuleName": "MY-Deduction-SOCSO",
+  //   "RuleType": "Deduction",
+  //   "Priority": 2,
+  //   "IsActive": true,
+  //   "Conditions": [
+  //     { "Parameter": "Country", "Operator": "==", "Value": "MY" }
+  //   ],
+  //   "Actions": [
+  //     { "ActionType": "ApplyFixedDeduction", "ActionValue": 350 }
+  //   ]
+  // },
+  // {
+  //   "RuleID": 115,
+  //   "RuleName": "MY-Deduction-Lifestyle",
+  //   "RuleType": "Deduction",
+  //   "Priority": 3,
+  //   "IsActive": true,
+  //   "Conditions": [
+  //     { "Parameter": "Country", "Operator": "==", "Value": "MY" }
+  //   ],
+  //   "Actions": [
+  //     { "ActionType": "ApplyFixedDeduction", "ActionValue": 2500 }
+  //   ]
+  // }
+  {
+    "RuleID": 200,
+    "RuleName": "OT10 Rate",
+    "RuleType": "Overtime",
+    "Priority": 1,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "OT10Hours", "Operator": ">", "Value": 0 },
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyMultiplier", "ActionTarget": "OT10Amount", "ActionValue": 1.0 }
+    ]
+  },
+  {
+    "RuleID": 201,
+    "RuleName": "OT15 Rate",
+    "RuleType": "Overtime",
+    "Priority": 2,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "OT15Hours", "Operator": ">", "Value": 0 },
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyMultiplier", "ActionTarget": "OT15Amount", "ActionValue": 1.5 }
+    ]
+  },
+  {
+    "RuleID": 202,
+    "RuleName": "OT20 Rate",
+    "RuleType": "Overtime",
+    "Priority": 3,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "OT20Hours", "Operator": ">", "Value": 0 },
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyMultiplier", "ActionTarget": "OT20Amount", "ActionValue": 2.0 }
+    ]
+  },
+  {
+    "RuleID": 203,
+    "RuleName": "OT30 Rate",
+    "RuleType": "Overtime",
+    "Priority": 4,
+    "IsActive": true,
+    "Conditions": [
+      { "Parameter": "OT30Hours", "Operator": ">", "Value": 0 },
+      { "Parameter": "Country", "Operator": "==", "Value": "TH" }
+    ],
+    "Actions": [
+      { "ActionType": "ApplyMultiplier", "ActionTarget": "OT30Amount", "ActionValue": 3.0 }
+    ]
+  }
+
+]

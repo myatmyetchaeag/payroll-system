@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxRuleTest", "TaxRuleTest.csproj", "{56BB2D50-E887-AB03-D10F-E792F4A9A085}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56BB2D50-E887-AB03-D10F-E792F4A9A085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BB2D50-E887-AB03-D10F-E792F4A9A085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BB2D50-E887-AB03-D10F-E792F4A9A085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BB2D50-E887-AB03-D10F-E792F4A9A085}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC23FB85-F29A-4B90-893E-01FA2F3DDD94}
+	EndGlobalSection
+EndGlobal
